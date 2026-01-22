@@ -1,0 +1,16 @@
+- name: run a webserver
+  gather_facts: no
+  hosts : pine-anstest01
+  tasks:
+    - name: installing httpd
+      debug: 
+        msg: installing httpd
+    - name: start and enable httpd
+      debug:
+        msg: starting httpd
+    - name: open firewall
+      debug:
+        msg: opening firewalld
+    - name: copy a prepared file
+      debug:
+        msg: copying file
